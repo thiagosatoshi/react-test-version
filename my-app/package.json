@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "release": "release-it --ci",
-    "release-minor": "yarn version --minor && release-it --ci"
+    "release-minor": "yarn version --minor && release-it --ci",
+    "release": "release-it minor --ci --no-npm"
   },
   "eslintConfig": {
     "extends": [
