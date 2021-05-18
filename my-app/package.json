@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -18,7 +18,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "release-minor": "yarn version --minor && release-it --ci",
-    "release": "yarn version --minor && release-it minor --ci"
+    "release-version": "yarn version --minor",
+    "release-tags": "release-it minor --ci"
   },
   "eslintConfig": {
     "extends": [
