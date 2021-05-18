@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "release-minor": "yarn version --minor && release-it --ci",
     "release-version": "yarn version --minor",
-    "release-tags": "release-it --ci"
+    "release-tags": "release-it --ci --no-npm"
   },
   "eslintConfig": {
     "extends": [
@@ -38,8 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "npm": {
-    "publish": false
   }
 }
