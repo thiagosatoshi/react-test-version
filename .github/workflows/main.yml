@@ -15,9 +15,10 @@ on:
 jobs:
   merge-PR:
     if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest        
     steps:
-      - name: Bump app version
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: yarn version --minor
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '10.x'
+      - run: yarn version
