@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,3 +29,6 @@ jobs:
       with:
         token: '${{ secrets.GITHUB_TOKEN }}'    
     - run: cd my-app && yarn version --minor
+    - run: git add .
+    - run: git commit -m "New version created!"
+    - run: git push
