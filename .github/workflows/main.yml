@@ -15,8 +15,6 @@ jobs:
         uses: mitchellsimoens/gpr-pr-version-bump@v1
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          cwd: ./my-app
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
