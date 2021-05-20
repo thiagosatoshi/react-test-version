@@ -29,6 +29,4 @@ jobs:
       with:
         token: '${{ secrets.GITHUB_TOKEN }}'    
     - run: cd my-app && yarn version --minor
-    - run: git add .
-    - run: git commit -m "New version created!"
     - run: git push
