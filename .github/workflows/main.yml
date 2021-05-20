@@ -21,4 +21,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '10.x'
+      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
       - run: yarn version
