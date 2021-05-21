@@ -2,7 +2,7 @@ name: Bump version
 on:
   push:
     branches:
-      - main
+      - master
     paths-ignore:
       - 'package.json'
       - 'CHANGELOG.md'
@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN_ACTION }}
+        token: ${{ secrets.GITHUBTOKENACTION }}
     - name: Bump version and push tag
       uses: TriPSs/conventional-changelog-action@master
       with:
@@ -22,3 +22,4 @@ jobs:
         preset: 'angular'
         tag-prefix: ''
         output-file: 'CHANGELOG.md'
+  
