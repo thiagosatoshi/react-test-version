@@ -4,6 +4,8 @@ import './App.css';
 function App() {
   console.log(`${process.env.REACT_APP_VERSION}`)
 
+  console.log(`${process.env.REACT_APP_VERSION}`)
+
   return (
     <div className="App">
       <header className="App-header">
